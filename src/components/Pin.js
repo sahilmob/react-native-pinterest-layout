@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import { scale } from "react-native-size-matters";
 
 import Button from "./UI/Button";
 import LocalImage from "./LocalImage";
@@ -12,10 +13,10 @@ export default class Pin extends Component {
 			<View style={styles.PinContainer}>
 				<View style={styles.PinHeader}>
 					<View style={styles.UtilityNav}>
-						<Icon name="chevron-left" size={20} />
-						<Icon name="heart" size={20} />
-						<Icon name="paper-plane" size={20} />
-						<Icon name="ellipsis-h" size={20} />
+						<Icon name="chevron-left" size={scale(20)} />
+						<Icon name="heart" size={scale(20)} />
+						<Icon name="paper-plane" size={scale(20)} />
+						<Icon name="ellipsis-h" size={scale(20)} />
 					</View>
 					<View style={styles.PinButtonContainer}>
 						<Button

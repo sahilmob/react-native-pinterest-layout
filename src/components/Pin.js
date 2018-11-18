@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 import Button from "./UI/Button";
+import LocalImage from "./LocalImage";
 
 export default class Pin extends Component {
 	render() {
@@ -24,7 +25,11 @@ export default class Pin extends Component {
 					</View>
 				</View>
 				<View style={styles.PinContent}>
-					<Text style={styles.ImagePlaceholder}>Image Placeholder</Text>
+					<LocalImage
+						source={require("../assets/img/2.jpeg")}
+						originalWidth={1920}
+						originalHeight={2880}
+					/>
 				</View>
 				<View style={styles.PinMeta}>
 					<View style={styles.PinMetaTextContainer}>
@@ -85,7 +90,6 @@ const styles = StyleSheet.create({
 		alignItems: "flex-end"
 	},
 	PinContent: {
-		flex: 3,
 		justifyContent: "center",
 		alignItems: "center",
 		paddingHorizontal: 8

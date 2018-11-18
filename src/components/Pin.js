@@ -7,6 +7,7 @@ import LocalImage from "./LocalImage";
 
 export default class Pin extends Component {
 	render() {
+		const { source, originalWidth, originalHeight } = this.props;
 		return (
 			<View style={styles.PinContainer}>
 				<View style={styles.PinHeader}>
@@ -26,9 +27,9 @@ export default class Pin extends Component {
 				</View>
 				<View style={styles.PinContent}>
 					<LocalImage
-						source={require("../assets/img/2.jpeg")}
-						originalWidth={1920}
-						originalHeight={2880}
+						source={source}
+						originalWidth={originalWidth}
+						originalHeight={originalHeight}
 					/>
 				</View>
 				<View style={styles.PinMeta}>

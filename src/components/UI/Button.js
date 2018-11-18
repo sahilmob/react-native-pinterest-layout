@@ -12,7 +12,7 @@ export default (Button = props => {
 	} = props;
 
 	const styles = StyleSheet.create({
-		PinButton: {
+		Button: {
 			flexDirection: "row",
 			alignItems: "center",
 			padding: 8,
@@ -20,20 +20,20 @@ export default (Button = props => {
 			backgroundColor: "red",
 			...btnCustomStyles
 		},
-		PinIcon: {
+		Icon: {
 			color: "white",
 			...btnIconStyles
 		},
-		PinButtonText: {
+		ButtonText: {
 			color: "white",
 			...btnTextCustomStyles
 		}
 	});
 
 	return (
-		<View style={styles.PinButton}>
-			{iconName && <Icon name={iconName} style={styles.PinIcon} />}
-			<Text style={styles.PinButtonText}>{btnText}</Text>
+		<View style={styles.Button}>
+			{iconName && <Icon name={iconName} style={styles.Icon} />}
+			<Text style={styles.ButtonText}>{btnText}</Text>
 		</View>
 	);
 });

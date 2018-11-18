@@ -49,9 +49,7 @@ export default class Pin extends Component {
 					</View>
 				</View>
 				<View style={styles.PinUser}>
-					<View style={styles.PinUserAvatar}>
-						<Text>Placeholder</Text>
-					</View>
+					<View style={styles.PinUserAvatar} />
 					<View style={styles.PinUserContainer}>
 						<Text style={styles.PinUserText}>
 							<Text style={styles.TextBold}>User Name</Text> saved to{" "}
@@ -105,32 +103,37 @@ const styles = StyleSheet.create({
 	},
 	PinMeta: {
 		flex: 1,
-		minHeight: 70,
+		minHeight: scale(70),
 		flexDirection: "row",
-		paddingVertical: 16,
+		paddingVertical: scale(16),
 		paddingHorizontal: scale(16)
 	},
-	PinMetaTextContainer: {},
+	PinMetaText: {
+		fontSize: scale(12)
+	},
 	UtilityButton: {
 		backgroundColor: "#cecece",
-		paddingHorizontal: 18
+		paddingHorizontal: scale(18)
 	},
 	UtilityButtonText: {
 		color: "#1e1e1e",
 		fontWeight: "bold"
 	},
-	PinUserContainer: {},
 	PinUser: {
 		flex: 5,
 		flexDirection: "row",
-		paddingHorizontal: 8
+		paddingHorizontal: scale(16)
+	},
+	PinUserText: {
+		marginTop: scale(7),
+		fontSize: scale(10)
 	},
 	PinUserAvatar: {
-		width: 50,
-		height: 50,
+		width: scale(50),
+		height: scale(50),
 		backgroundColor: "black",
-		borderRadius: 25,
-		marginRight: 8
+		borderRadius: scale(25),
+		marginRight: scale(8)
 	},
 	TextBold: {
 		fontWeight: "bold"

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
+import Button from "./UI/Button";
+
 export default class Pin extends Component {
 	render() {
 		return (
@@ -14,10 +16,11 @@ export default class Pin extends Component {
 						<Icon name="ellipsis-h" size={20} />
 					</View>
 					<View style={styles.PinButtonContainer}>
-						<View style={styles.PinButton}>
-							<Icon name="thumbtack" style={styles.PinIcon} />
-							<Text style={styles.PinButtonText}>Save</Text>
-						</View>
+						<Button
+							iconName="thumbtack"
+							btnText="Save"
+							btnIconStyles={styles.PinButtonIcon}
+						/>
 					</View>
 				</View>
 				<View style={styles.PinContent}>
@@ -31,11 +34,11 @@ export default class Pin extends Component {
 						</Text>
 					</View>
 					<View style={styles.PinButtonContainer}>
-						<View style={[styles.PinButton, styles.UtilityButton]}>
-							<Text style={[styles.PinButtonText, styles.UtilityButtonText]}>
-								Visit
-							</Text>
-						</View>
+						<Button
+							btnText="Visit"
+							btnCustomStyles={styles.UtilityButton}
+							btnTextCustomStyles={styles.UtilityButtonText}
+						/>
 					</View>
 				</View>
 				<View style={styles.PinUser}>
@@ -72,25 +75,14 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "space-between"
 	},
-	PinButtonContainer: {
-		flex: 1,
-		alignItems: "flex-end"
-	},
-	PinButton: {
-		flexDirection: "row",
-		alignItems: "center",
-		backgroundColor: "red",
-		padding: 8,
-		borderRadius: 4
-	},
-	PinIcon: {
+	PinButtonIcon: {
 		transform: [{ rotate: "45deg" }],
 		marginRight: 7,
 		color: "white"
 	},
-	PinButtonText: {
-		color: "white",
-		fontWeight: "bold"
+	PinButtonContainer: {
+		flex: 1,
+		alignItems: "flex-end"
 	},
 	PinContent: {
 		flex: 3,

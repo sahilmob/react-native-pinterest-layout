@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
 		justifyContent: "space-between",
 		alignItems: "center",
 		padding: 10,
-		flex: 1
+		minHeight: 50
 	},
 	UtilityNav: {
 		flexDirection: "row",
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
 	},
 	PinMeta: {
 		flex: 1,
+		minHeight: 70,
 		flexDirection: "row",
 		paddingVertical: 16,
 		paddingHorizontal: 8
@@ -115,6 +116,7 @@ const styles = StyleSheet.create({
 		color: "#1e1e1e",
 		fontWeight: "bold"
 	},
+	PinUserContainer: {},
 	PinUser: {
 		flex: 5,
 		flexDirection: "row",

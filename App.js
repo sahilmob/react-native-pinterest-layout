@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, ScrollView, View } from "react-native";
 
 import Pin from "./src/components/Pin";
 
@@ -13,18 +13,15 @@ const instructions = Platform.select({
 export default class App extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
+			<ScrollView style={styles.container}>
 				<Pin />
-			</View>
+			</ScrollView>
 		);
 	}
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
 		backgroundColor: "#F5FCFF"
 	},
 	welcome: {

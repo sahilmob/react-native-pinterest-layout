@@ -74,8 +74,9 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center",
-		padding: 10,
-		minHeight: 50
+		paddingVertical: scale(10),
+		paddingHorizontal: scale(16),
+		minHeight: scale(50)
 	},
 	UtilityNav: {
 		flexDirection: "row",
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
 	PinContent: {
 		justifyContent: "center",
 		alignItems: "center",
-		paddingHorizontal: 8
+		paddingHorizontal: scale(16)
 	},
 	ImagePlaceholder: {
 		backgroundColor: "#1e1e1e",
@@ -107,7 +108,7 @@ const styles = StyleSheet.create({
 		minHeight: 70,
 		flexDirection: "row",
 		paddingVertical: 16,
-		paddingHorizontal: 8
+		paddingHorizontal: scale(16)
 	},
 	PinMetaTextContainer: {},
 	UtilityButton: {

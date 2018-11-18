@@ -32,7 +32,7 @@ export default (Button = props => {
 
 	return (
 		<View style={styles.PinButton}>
-			{iconName ? <Icon name={iconName} style={styles.PinIcon} /> : null}
+			{iconName && <Icon name={iconName} style={styles.PinIcon} />}
 			<Text style={styles.PinButtonText}>{btnText}</Text>
 		</View>
 	);
